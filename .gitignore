@@ -218,3 +218,19 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# --- OnTimeSydney ---
+# raw and local data never go in git (fixtures are the only exception)
+data/
+*.parquet
+!tests/fixtures/**/*.parquet
+*.pb
+!tests/fixtures/**/*.pb
+
+# dbt build output
+dbt/target/
+dbt/dbt_packages/
+dbt/logs/
+
+# macOS
+.DS_Store
